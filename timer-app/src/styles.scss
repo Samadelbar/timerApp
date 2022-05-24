@@ -1,1 +1,122 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f1136c ;
+    background: linear-gradient(270deg, #f1136c 0%, white 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'lato';
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dnone{
+    display: none;
+}
+.content{
+    background-color: black;
+    width: 45rem;
+    height: auto;
+    border-radius: 1.5rem;
+
+    .content-timer{
+        display: flex;
+        justify-content: center;
+        padding-top: 5rem;
+
+        .content-h,
+        .content-m,
+        .content-s{
+            width: 15rem;
+            height: 10rem;
+
+            .time{
+                font-size: 100px;
+                color: white;
+                font-weight: 300;
+                text-align: center;
+
+                span{
+                    font-size: 3rem;
+                    font-weight: 400;
+                    color: #f1136c;
+                }
+            }
+        }
+        .content-btn{
+            text-align: center;
+
+            button{
+                font-size: 2.8rem;
+                width: 3rem;
+                margin: 0 10px;
+                border-radius: 10px;
+                border: none;
+                outline: inherit;
+                color: #f1136c;
+                background: black;
+            }
+
+            :hover{
+                background: #302f3a;
+                transition: 0.5s;
+                transform: scale(0.8);
+                cursor: pointer;
+            }
+            
+        }
+    }
+
+    .content-btn-action{
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+        padding-bottom: 3rem;
+
+        button{
+            font-size: 4.5rem;
+            width: 6rem;
+            margin: 0 30px;
+            border-radius: 20px;
+            border: none;
+            outline: inherit;
+            color: #f1136c;
+            background: black;
+
+            &:hover{
+                background-color: #302f3a;
+                transition: 0.6s;
+                transform: scale(0.8);
+                cursor: pointer;
+            }
+
+            &:disabled{
+                opacity: 0.3;
+            }
+        }
+    }
+}
+
+//.....animation
+.move{
+    animation: move_timer 1.3s infinite;
+}
+
+@keyframes move_timer{
+    20%,
+    50%,
+    80%{
+        transform: translateY(0px);
+    }
+    30%{
+        transform: translateY(-45px);
+    }
+    60%{
+        transform: translateY(-25px);
+    }
+}
